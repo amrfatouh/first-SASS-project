@@ -1,0 +1,76 @@
+//variables
+$main-darkest: #0f2d30
+$main-dark: #004952
+$main-light: #009fb3
+$main-background: #c8dadb
+
+
+//mixins
+=container-style($bg, $color, $corner, $padding)
+  width: 600px
+  margin: auto
+  background-color: $bg
+  border-radius: $corner
+  padding: $padding
+  color: $color
+  h2
+    margin: 0
+  
+=btn-style($width, $height, $bg, $color, $corner, $padding, $margin)
+  width: $width
+  height: $height
+  background-color: $bg
+  color: $color
+  border-radius: $corner
+  padding: $padding
+  margin: $margin
+  margin: auto
+  display: block
+  
+  
+//styles
+h1
+  width: 100px
+  height: 100px
+  background-color: $main-darkest
+  color: white
+  text-align: center
+  padding: 10px 10px 0 10px
+  margin-left: 300px
+  border-radius: 20px
+
+.container1
+  +container-style($main-light, black, 10px, 40px 25px 15px)
+  margin-top: -50px
+  position: relative
+  z-index: -1
+  
+.container2
+  +container-style($main-light, #910000, 20px, 20px)
+    
+.btn1
+  +btn-style(auto, auto, $main-dark, lighten($main-light, 50%), 7px, 10px 20px, 0 0 15px 0)
+  box-shadow: 0 0 20px $main-darkest
+  &:hover
+    background-color: lighten($main-dark, 10%)
+    cursor: pointer
+    border-color: $main-dark
+  
+.btn2
+  +btn-style(100px, 70px, $main-darkest, white, 50%, 0, 10px)
+  border: none
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
